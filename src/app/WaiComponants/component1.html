@@ -1,0 +1,49 @@
+<h2>This is my first component </h2>
+<p>name of the component{{name}}</p>
+<h2>State  :{{obj.State}}</h2>
+<h1>City   :{{obj.City}}</h1>
+<h3>Pincode: {{obj.Pincode}}</h3>
+
+<!-- 
+City :<input type="text" (change)="setCity($event)">
+<h1>{{obj.city}}</h1>
+<br>
+State:<input type="text" (change)="setState($event)">
+<h1>{{obj.State}}</h1>
+
+Pincode:<input type="text" (change)="setPincode($event)">
+<h1> {{obj.Pincode}}</h1>
+
+
+<h1>Using DropDown Select State</h1>
+
+<select (change)="setSateUsingDrop($event)">Select State
+    <option>Pune</option>
+    <option>Nashik</option>
+    <option>Surat</option>
+</select><br>
+<h1> {{obj.State}}</h1> -->
+
+
+<ul>
+    <li *ngFor="let name of names">{{name}}</li>
+</ul>
+
+<h2>Address</h2>
+<ul>
+    <li *ngFor="let add of Addreess">
+      <span>City :{{add.City}}  </span>
+      <span>State :{{add.State}}  </span>
+      <span>PinCode: {{add.Pincode}}</span> 
+    </li>
+
+</ul>
+
+<ul>
+    <li *ngFor="let add of Addreess">
+      <ul> 
+          <li *ngFor="let a of add | keyvalue">{{a.key}} :  {{a.value}}</li>
+        </ul>
+    </li>
+</ul>
+   

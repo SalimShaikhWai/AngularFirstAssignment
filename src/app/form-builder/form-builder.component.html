@@ -1,0 +1,21 @@
+<p>form-builder works!</p>
+<div class="col-4">
+   <ul>
+       
+       <form (submit)="returnFuntion($event)">
+        
+      <li  *ngFor="let keys of getKeys()">
+        <div class="form-group">
+        
+        <label for="exampleInputEmail1">  {{keys}}</label>
+        
+        <input type="text" [name]="keys">
+        </div>
+    
+    
+    
+    </li>
+      <input type="submit" value="submit">
+    </form>
+    </ul>
+</div>

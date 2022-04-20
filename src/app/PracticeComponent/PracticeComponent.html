@@ -1,0 +1,11 @@
+
+Username<input type="text" name="username" #username (change)="checkName(username.value)" ><br>
+<p *ngIf="usernameError">Username should be bet 4 to 10 charector</p>
+    
+password<input type="text" name="password" #password (change)="checkPassword(password.value)" ><br>
+<p *ngIf="passwordError">password should be bet 4 to 10 charector</p>
+
+<input type="button" [disabled]="disabldButton" value="submit">
+<button type="button"  value="reset" (click)="reset(username,password)" >reset</button>
+
+

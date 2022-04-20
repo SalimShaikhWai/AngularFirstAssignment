@@ -9,28 +9,32 @@
     <title>Dynamic Address</title>
 </head>
 <body>
-    <div class="row container">
-           <div>
-            <label>City</label>
-            <input type="text" name="{{City}}" (change)="setCity($event)">
-            </div>
-            <div>
-                 <label>State</label>
-                <input type="text" name="{{State}}" (change)="setState($event)">
-            </div>
-            <div> <label>Pincode</label>
-                <input type="text" name="{{Pincode}}" (change)="setPincode($event)">
-            </div>
-            <div> 
-                <button type="button" value="Add" (click)="addInObject()">
-                    Add
-                </button>
-                <button type="button" value="Show" (click)="showAllObject()">
-                    Show
-                </button>
-            </div>
-    </div>
-   
+    
+    
+    <div class="row bg-secondary col-12 justify-content-center mb-3">Using Two Way Binding</div>
+    <div class="row container-fluid ">
+     
+        <div>
+         <label>City</label>
+         <input type="text" name=""  #city>
+         </div>
+         <div>
+              <label>State</label>
+             <input type="text" name="" #state>
+         </div>
+         <div> <label>Pincode</label>
+             <input type="text" name=""  #pincode>
+         </div>
+         <div> 
+             <button type="button" value="Add" (click)="addInObject(city.value,state.value,pincode.value)">
+                 Add
+             </button>
+             <button type="button" value="Show" (click)="showAllObject()">
+                 Show
+             </button>
+         </div>
+ </div>
+ <div class="row bg-secondary col-12 justify-content-center mb-3">Toggle Your Data</div>
     <div *ngIf="show">
         <ul>
             <li *ngFor="let obj of address">

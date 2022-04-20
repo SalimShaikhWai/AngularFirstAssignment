@@ -1,0 +1,86 @@
+
+<div class="row">
+
+
+    <app-form-builder [returnFuntion]="addEmployee" [formObject]="dummyEmployee"  ></app-form-builder>
+
+
+    
+    <app-form-builder  [returnFuntion]="addbooks" [formObject]="dummyBook"></app-form-builder>
+    
+    <app-form-builder  [returnFuntion]="addPizza" [formObject]="dummyPizza"></app-form-builder>
+         <!-- <div class="col-3 md-2 bg-secondary">
+            <h1>
+                Add Employee  
+            </h1>
+            <form (submit)="addEmployee($event)" >
+                <div class="form-group">
+                    <label for="exampleInputEmail1">EmpId</label>
+                    <input  class="form-control" type="number" name="empId"  ><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Name</label>
+                    <input  class="form-control" type="text" name="name"><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">salary</label>
+                    <input class="form-control" type="number" name="salary"><br>
+                </div>
+               
+                <button class="btn btn-primary mr-3 " type="submit" >Add</button><br>
+            </form>
+            <app-display-child  [objects]="employees"   ></app-display-child>
+        </div> -->
+        <div class="col-3 bg-secondary ml-3">
+            
+            
+            <h1>
+                Add Book
+            </h1>
+            <form (submit)="addbooks($event)" >
+                <div class="form-group">
+                    <label for="exampleInputEmail1"> Book Title</label>
+                    <input class="form-control" type="text" name="bookTitle"><br>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputEmail1"> Book Name</label>
+                <input class="form-control" type="text" name="bookname"><br>
+                </div>
+                
+                <button class="btn btn-primary mr-3" type="submit" >Add</button><br>
+                
+            </form>
+            <app-display-child  [objects]="books" ></app-display-child>
+
+        </div>
+
+
+           
+        <div class="col-3 bg-secondary ml-3">
+            
+            <h1>
+                Add Pizza
+            </h1>
+            <form (submit)="addPizza($event)" >
+                <div class="form-group">
+                    <label for="exampleInputEmail1">  Pizza Name</label>
+                    <input  class="form-control" type="text" name="pizzaName"><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">  Pizza Price</label>
+                    <input class="form-control" type="number" name="pizzaPrice"><br>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">  Pizza Type</label>
+                    <input class="form-control" type="text" name="pizzaType"><br>
+                </div>
+               
+               
+                <button class="btn btn-primary mr-3" type="submit" >Add</button><br>
+                
+            </form>
+            <app-display-child [objects]="pizzes"  ></app-display-child>
+        </div>
+
+
+</div>

@@ -1,0 +1,7 @@
+<form>
+<input type="text"   id="myName" #Name><br>
+</form>
+{{name}}
+<button (click)="getName(Name)">ByTemplateRefe</button><br>
+<!-- <button (click)="getElementId('myName')">ByDocumentEle</button><br> -->
+<button (click)='getNameByElement("myName")'>ByElement</button><br>

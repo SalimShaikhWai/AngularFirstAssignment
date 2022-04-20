@@ -1,0 +1,25 @@
+<div class="col flex-row text-align-center ">
+    <div class=" justify-content-center  text-white  ">
+        <form>
+            <div class="form-group">
+            <label for="exampleInputEmail1">UserName</label>
+            <input type="email" class="form-control" id="userName" aria-describedby="emailHelp" (change)="checkUsername($event)" placeholder="Enter email" #userName>
+            <!-- <small id="emailError" class="bg-danger" *ngIf="userError" class="form-text text-muted">Username should be more then 4 letter and less than 10 letter</small> -->
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password" (change)="checkPassword($event)" placeholder="Password" #password>
+            <!-- <small id="passwordError" *ngIf="passwordError" class="form-text text-muted">Password should be more then 4 letter and less than 10 letter</small> -->
+            </div>
+        
+            <button type="submit"  class="btn btn-primary mr-3" [disabled]="disabledButton" (click)="validated(userName.value,password.value)">Submit</button>
+            
+  
+            <button type="button" class="btn btn-primary" (click)="reset(userName,password)">Reset</button>
+
+
+         
+
+        </form>
+    </div>
+</div>

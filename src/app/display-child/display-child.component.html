@@ -1,0 +1,23 @@
+
+<ul>
+    <li *ngFor="let object of objects ">
+      <ul> 
+       
+        <!-- <li style="display: inline;" *ngFor="let property of object | keyvalue">
+            {{property.value}} 
+        </li>
+       -->
+       <li style="display: inline;" *ngFor="let property of getKeys(object)">
+        {{object[property]}}
+       </li>
+  
+
+      
+        
+       
+
+
+  
+        
+    
+</ul>

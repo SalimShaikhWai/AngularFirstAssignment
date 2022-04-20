@@ -8,29 +8,11 @@ import { Component } from "@angular/core";
 export class DynamicArrayComponents
 {   show=false;
     names="Dynamic Component";
-    City="";
-    State="";
-    Pincode !: number;
     address:Array<Address>=[];
     
-    setCity(event:any)
+    addInObject(city:string,state:string,pincode:string)
     {
-        this.City=event.target.value;
-    }
-    setState(event:any)
-    {
-        this.State=event.target.value;
-    }
-    setPincode(event:any)
-    {
-        this.Pincode=event.target.value;
-    }
-
-
-
-    addInObject()
-    {
-      let add =new Address(this.State,this.City,this.Pincode);
+      let add =new Address(state,city,pincode);
       this.address[this.address.length]=add;
     
     }
@@ -52,8 +34,8 @@ class Address{
    
     public City:String;
     State:String; 
-    Pincode:number;
-    constructor(private _city: String,private _state:String,private _pincode:number)
+    Pincode:String;
+    constructor(private _city: String,private _state:String,private _pincode:string)
     {
         this.City=_city;
         this.State=_state;
